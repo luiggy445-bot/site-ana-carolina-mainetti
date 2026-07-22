@@ -60,6 +60,12 @@
   .portrait-badge .stars{color:var(--gold);font-size:13px}
   .portrait-badge strong{font-size:14px}
   .portrait-badge small{font-size:11.5px;color:var(--ink-soft);display:block}
+  .apresentacao-inner{max-width:800px;margin:0 auto;text-align:center}
+  .apresentacao-inner h2{font-size:clamp(26px,3vw,34px);margin-bottom:12px;max-width:20ch;margin-left:auto;margin-right:auto}
+  .apresentacao-inner>p{color:var(--ink-soft);font-size:16px;max-width:54ch;margin:0 auto 30px}
+  .video-card{background:var(--white);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .video-frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:var(--ink)}
+  .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
   .cred-bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
   .cred-bar .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 36px}
   .cred-item{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600}
@@ -150,7 +156,7 @@
   <a href="#abordagens">Especialidades</a>
   <a href="#depoimentos">Depoimentos</a>
   <a href="#contato">Contato</a>
-  <a class="btn btn-main" style="margin-top:24px" href="mailto:anacarolinamainetti@gmail.com">Agendar uma sessão</a>
+  <a class="btn btn-main" style="margin-top:24px" href="https://zenklub.com.br/psicologos/ana-carolina/" target="_blank" rel="noopener">Agendar uma sessão</a>
 </div>
 
 <main id="topo">
@@ -162,7 +168,7 @@
       <h1>Encontre <em>equilíbrio</em> onde você estiver.</h1>
       <p class="lead">Sou Ana Carolina Mainetti, psicóloga com mais de 15 anos de dedicação à psicologia clínica. Desde 2017 atendo pacientes de diversas idades e culturas por terapia online, com formação sólida em oito abordagens diferentes.</p>
       <div class="hero-actions">
-        <a class="btn btn-main" href="mailto:anacarolinamainetti@gmail.com">Agendar uma sessão</a>
+        <a class="btn btn-main" href="https://zenklub.com.br/psicologos/ana-carolina/" target="_blank" rel="noopener">Agendar uma sessão</a>
         <a class="text-link" href="mailto:anacarolinamainetti@gmail.com">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           anacarolinamainetti@gmail.com
@@ -173,6 +179,21 @@
       <div class="portrait-frame"><img src="assets/82f7d1c23d1dae5f8a5aea300425e742.jpg" alt="Ana Carolina Mainetti, psicóloga"></div>
       <div class="portrait-ring"></div>
       <div class="portrait-badge"><span class="stars">★★★★★</span><div><strong>5,0</strong><small>41 avaliações</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="apresentacao" id="apresentacao">
+  <div class="wrap">
+    <div class="apresentacao-inner">
+      <span class="eyebrow">Me conheça</span>
+      <h2>Uma conversa antes da nossa primeira sessão</h2>
+      <p>Assista e conheça um pouco da minha trajetória, minha forma de trabalho e como a terapia online pode te ajudar a encontrar equilíbrio.</p>
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/0nvdOxXmThQ" title="Ana Carolina Mainetti se apresenta" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -284,7 +305,7 @@
   <div class="wrap">
     <h2>Dê o primeiro passo para o seu equilíbrio</h2>
     <p>Fale agora e agende sua sessão — terapia individual ou de casal, 100% online.</p>
-    <a class="btn btn-main" href="mailto:anacarolinamainetti@gmail.com">Agendar uma sessão</a>
+    <a class="btn btn-main" href="https://zenklub.com.br/psicologos/ana-carolina/" target="_blank" rel="noopener">Agendar uma sessão</a>
   </div>
 </section>
 
@@ -356,8 +377,7 @@ body{margin-top:44px !important}
     ["#pe-bar","#pe-style","#pe-script","#pe-file"].forEach(function(s){var n=doc.querySelector(s);if(n)n.remove()});
     doc.querySelectorAll("[contenteditable]").forEach(function(n){n.removeAttribute("contenteditable")});
     doc.querySelectorAll(".pe-hover").forEach(function(n){n.classList.remove("pe-hover")});
-    var html="<!DOCTYPE html>
-"+doc.outerHTML;
+    var html="<!DOCTYPE html>\n"+doc.outerHTML;
     var blob=new Blob([html],{type:"text/html"});
     var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="index.html";a.click();
   });
